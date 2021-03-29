@@ -52,7 +52,7 @@ function drawWeather(data, el) {
     var celcius = Math.round(parseFloat(data.main.temp)-273.15);
     var childNodes = document.querySelectorAll('#'+el+'> *');
     childNodes[0].innerHTML = data.name;
-    childNodes[1].src = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+    childNodes[1].src = "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
     childNodes[2].innerHTML = celcius + '&deg;';
     childNodes[3].innerHTML = data.weather[0].main;
 }
@@ -79,7 +79,7 @@ function fourSquare() {
 }
 
 function openTripMap() {
-    let url = 'http://api.opentripmap.com/0.1/en/places/radius',
+    let url = 'https://api.opentripmap.com/0.1/en/places/radius',
         qString = '?radius=500&lon=2.3488&lat=48.85341&kinds=restaurants&limit=10&apikey=' + openTripMapKey;
 
     fetch(url+qString)
