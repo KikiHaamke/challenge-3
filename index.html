@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Title</title>
+    <link type="text/css" href="styles/reset.css" rel="stylesheet"/>
+    <link type="text/css" href="styles/my_style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="scripts/my_scripts.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <div class="label">
+                <span>Dashboard</span>
+            </div>
+        </div>
+        <div class="row header">
+            <h2>Overview</h2>
+            <img src="images/spacex.svg" alt="logo">
+        </div>
+        <div class="divider">
+            <h3>Weather</h3>
+        </div>
+        <div class="row">
+            <button onclick="setWeather()">Refresh</button>
+        </div>
+        <div class="row">
+            <div class="box doughnut">
+                <div id="weatherAmsterdam">
+                    <div class="location"></div>
+                    <img src="" alt="" class="icon">
+                    <h1 class="temp"></h1>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="box doughnut">
+                <div id="weatherNewYork">
+                    <div class="location"></div>
+                    <img src="" alt="" class="icon">
+                    <h1 class="temp"></h1>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="box doughnut">
+                <div id="weatherLosAngeles">
+                    <div class="location"></div>
+                    <img src="" alt="" class="icon">
+                    <h1 class="temp"></h1>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="box doughnut">
+                <div id="weatherTokyo">
+                    <div class="location"></div>
+                    <img src="" alt="" class="icon">
+                    <h1 class="temp"></h1>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h3>Crypto</h3>
+        </div>
+        <div class="row">
+            <button onclick="setCoinPrices()">Refresh</button>
+        </div>
+        <div class="row">
+            <div class="box doughnut">
+                <div id="coinBTC">
+                    <h3 class="coin_name"></h3>
+                    <img class="coin_icon" src="" alt="">
+                    <h1 class="coin_price"></h1>
+                </div>
+            </div>
+            <div class="box doughnut">
+                <div id="coinETH">
+                    <h3 class="coin_name"></h3>
+                    <img class="coin_icon" src="" alt="">
+                    <h1 class="coin_price"></h1>
+                </div>
+            </div>
+            <div class="box doughnut">
+                <div id="coinBNB">
+                    <h3 class="coin_name"></h3>
+                    <img class="coin_icon" src="" alt="">
+                    <h1 class="coin_price"></h1>
+                </div>
+            </div>
+            <div class="box doughnut">
+                <div id="coinADA">
+                    <h3 class="coin_name"></h3>
+                    <img class="coin_icon" src="" alt="">
+                    <h1 class="coin_price"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="divider">
+            <h3>Search</h3>
+        </div>
+        <div class="row">
+            <div class="box line">
+                <form onsubmit="getWeatherInfo(); return false;">
+                    <input type="text" id="cname" name="cname" placeholder="City Name" required/>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="weatherSearch">
+                    <div class="location"></div>
+                    <img src="" alt="" class="icon">
+                    <h1 class="temp"></h1>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="box line">
+                <form onsubmit="getCoinInfo(); return false;">
+                    <input type="text" id="coin" name="coin" placeholder="Crypto" required/>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="coinSEARCH">
+                    <h3 class="coin_name"></h3>
+                    <img class="coin_icon" src="" alt="">
+                    <h1 class="coin_price"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+            <div class="box line"></div>
+        </div>
+        <div class="divider"></div>
+    </div>
+</div>
+</body>
+</html>
