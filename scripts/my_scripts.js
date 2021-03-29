@@ -85,9 +85,12 @@ function openTripMap() {
     fetch(url+qString)
         .then(resp => {
             console.log(resp);
+            return resp.json();
+        }).then(data => {
+            console.log(data);
         }).catch((error) => {
-        alert(error);
-    })
+            alert(error);
+        })
 }
 
 
