@@ -81,16 +81,13 @@ function getCultural(coords) {
                 .then(resp => {
                     return resp.json();
                 }).then(data => {
-                    console.log(data);
-
-                    var childNodes = document.querySelectorAll('#cultural'+(i+1)+'> *');
-                    childNodes[0].innerHTML = data.name;
-                    childNodes[1].src = data.preview ? data.preview.source : '';
-                    childNodes[2].innerHTML = data.wikipedia_extracts ? data.wikipedia_extracts.text : '';
+                var childNodes = document.querySelectorAll('#cultural' + (i + 1) + '> *');
+                childNodes[0].innerHTML = data.name;
+                childNodes[1].src = data.preview ? data.preview.source : '';
+                childNodes[2].innerHTML = data.wikipedia_extracts ? data.wikipedia_extracts.text : '';
             }).catch((error) => {
                 alert(error);
             })
-
         }
     }).catch((error) => {
         alert(error);
@@ -132,7 +129,7 @@ function placeMarkers() {
             .then(resp => {
                 return resp.json();
             }).then(data => {
-            let address = '<p>' + data.address.road + ' ' + data.address.house_number + ',<br>' + data.address.postcode + ' ' + data.address.city + '<br>' + data.address.country + '</p>';
+            let address = '<p>' + data.address.road + ' ' + data.address.house_number + '<br>' + data.address.postcode + ' ' + data.address.city + '<br>' + data.address.country + '</p>';
             var coordinates = e.features[0].geometry.coordinates.slice();
             var description = e.features[0].properties.description + address;
 
