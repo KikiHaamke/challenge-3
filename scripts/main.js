@@ -25,6 +25,7 @@ geocoder.on('result', function (e) {
         zoom: 15
     });
 
+    features = [];
     getRestaurants(coords);
     getCultural(coords);
 });
