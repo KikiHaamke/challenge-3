@@ -89,6 +89,17 @@ h4 {
   background-color: pink;
   border-radius: 12px;
 }
+.cult .title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.cult .image {
+  width: 100%;
+}
+.cult .desc {
+  font-size: 11px;
+  color: #15162c;
+}
 
 
 
