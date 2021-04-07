@@ -1,5 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2lraWhhYW1rZSIsImEiOiJja24zZjB2YnIwdWNsMm5vdTIycXZlYmM4In0.TEn26F_1TdNmQP7Zlcmw1w';
 
+//add map
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/kikihaamke/ckmlxufnw11oi17rm0512tfa6', // style URL
@@ -7,10 +8,13 @@ var map = new mapboxgl.Map({
     zoom: 5 // starting zoom
 });
 
+//get coords zoekbalk
 var geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     types: 'country,region,place,postcode,locality,neighborhood'
 });
+
+// place with id
 var features = [];
 
 geocoder.addTo('#geocoder');
@@ -30,7 +34,7 @@ geocoder.on('result', function (e) {
     getCultural(coords);
 });
 
-
+//andere api  parameter coords
 function getRestaurants(coords) {
     const openTripMapKey = '5ae2e3f221c38a28845f05b65370e244b3b310f07de647889ddf591c';
     let url = 'https://api.opentripmap.com/0.1/en/places/radius',
@@ -95,6 +99,7 @@ function getCultural(coords) {
     })
 }
 
+//markers gemaakt
 function placeMarkers() {
     map.addSource('places', {
         'type': 'geojson',
