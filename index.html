@@ -1,46 +1,95 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>MapBox</title>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>MapBox</title>
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+
     <script src="scripts/main.js" defer></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
-	<link type="text/css" href="styles/reset.css" rel="stylesheet"/>
-	<link href="styles/base.css" rel="stylesheet" />
-<!--	<link type="text/css" href="styles/grid.css" rel="stylesheet"/>-->
-	<!-- Geocoder assets -->
-	<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
-	<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" />
-	</head>
-	<body>
-		<div class="grid-container">
-			<div class="col">
-				<div class="row">
-					<div class="label">
-						<span>Dashboard</span>
-					</div>
-				</div>
-				<div class="row header">
-					<h2>Overview</h2>
-					<img src="images/spacex.svg" alt="logo">
-				</div>
-				<div class="divider">
-					<h3>Map</h3>
-				</div>
-				<div class="row-map">
-					<div id="map"></div>
-				</div>
-				<div class="divider">
-					<h3>Attractions</h3>
-				</div>
-				<div class="row-attractions">
-					<div class="attractions">
-						<h1> Hello</h1> <br>
-						<p>1. this is attraction 1.</p>
-					</div>
-				</div>
+    <link type="text/css" href="styles/reset.css" rel="stylesheet"/>
+    <link href="styles/base.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+<!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <div class="label">
+                <span>Dashboard</span>
+            </div>
+        </div>
+        <div class="row header">
+            <h2>Overview</h2>
+            <img src="images/spacex.svg" alt="logo">
+        </div>
+        <div class="divider">
+            <h3>Map</h3>
+        </div>
+        <div class="row">
+			<div class="box">
+                <div id="geocoder"></div>
 			</div>
-		</div>
-	</body>
+        </div>
+        <div class="divider">
+            <h3>Map</h3>
+        </div>
+        <div class="row">
+            <div class="box">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="divider">
+            <h3>Cultural</h3>
+        </div>
+        <div class="row">
+            <div class="box fifth">
+                <div id="cultural1" class="cult">
+                    <span class="title"></span>
+                    <img src="" alt="" class="image">
+                    <span class="desc"></span>
+                </div>
+            </div>
+            <div class="box fifth">
+                <div id="cultural2" class="cult">
+                    <span class="title"></span>
+                    <img src="" alt="" class="image">
+                    <span class="desc"></span>
+                </div>
+            </div>
+            <div class="box fifth">
+                <div id="cultural3" class="cult">
+                    <span class="title"></span>
+                    <img src="" alt="" class="image">
+                    <span class="desc"></span>
+                </div>
+            </div>
+            <div class="box fifth">
+                <div id="cultural4" class="cult">
+                    <span class="title"></span>
+                    <img src="" alt="" class="image">
+                    <span class="desc"></span>
+                </div>
+            </div>
+            <div class="box fifth">
+                <div id="cultural5" class="cult">
+                    <span class="title"></span>
+                    <img src="" alt="" class="image">
+                    <span class="desc"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
