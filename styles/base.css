@@ -41,6 +41,9 @@ h4 {
   align-items: center;
   justify-content: space-between;
 }
+.align-normal {
+  align-items: normal;
+}
 
 .divider {
   position: relative;
@@ -92,6 +95,7 @@ h4 {
 .cult .title {
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 .cult .image {
   width: 100%;

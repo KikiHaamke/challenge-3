@@ -85,7 +85,7 @@ function getCultural(coords) {
 
                     var childNodes = document.querySelectorAll('#cultural'+(i+1)+'> *');
                     childNodes[0].innerHTML = data.name;
-                    childNodes[1].src = data.image;
+                    childNodes[1].src = data.preview ? data.preview.source : '';
                     childNodes[2].innerHTML = data.wikipedia_extracts ? data.wikipedia_extracts.text : '';
             }).catch((error) => {
                 alert(error);
